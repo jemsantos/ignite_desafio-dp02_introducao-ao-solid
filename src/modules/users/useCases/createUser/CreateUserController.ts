@@ -9,9 +9,13 @@ class CreateUserController {
     // Complete aqui
     const { name, email } = request.body;
 
-    this.createUserUseCase.execute({ name, email });
+    try {
+      const newUser = this.createUserUseCase.execute({ name, email });
 
-    return response.status(201).send();
+      return response.status(201).json(newUser);
+    } catch (error) {
+      return response.status(400).json({ error: error.message });
+    }
   }
 }
 
