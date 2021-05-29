@@ -14,6 +14,7 @@ class User {
       this.id = uuidV4();
     }
     this.admin = false;
+    this.created_at = new Date();
   }
 }
 

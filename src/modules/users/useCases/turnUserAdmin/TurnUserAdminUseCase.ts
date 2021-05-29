@@ -21,5 +21,3 @@ class TurnUserAdminUseCase {
 }
 
 export { TurnUserAdminUseCase };
-
-// parei neste: Should not be able to turn a non existing user as admin......
